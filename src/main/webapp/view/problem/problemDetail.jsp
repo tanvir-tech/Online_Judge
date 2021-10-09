@@ -54,7 +54,19 @@
         <div class="row">
             <div class="col-lg-10">
                 <h3>Write your code here</h3>
-                <textarea class="form-control" id="ansCode" name="ansCode" rows="12"></textarea>
+                <textarea class="form-control" id="ansCode" name="ansCode" rows="12">
+public class Demo{
+        public static void main(String[] args) {
+
+                    // your code here
+
+
+
+
+
+    }
+}
+                </textarea>
             </div>
             <div class="col-lg-2">
                 <h4>Language</h4>

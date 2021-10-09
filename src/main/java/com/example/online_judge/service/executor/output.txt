@@ -1,0 +1,4 @@
+-------compiled------
+Online judge Running.......... Result =
+7
+-------ran--------

@@ -1,0 +1,5 @@
+cd /home/tanvir/IdeaProjects/Online_Judge/src/main/java/com/example/online_judge/service/executor
+javac Demo.java
+echo -------compiled------
+java Demo
+echo -------ran--------

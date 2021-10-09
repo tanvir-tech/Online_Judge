@@ -8,7 +8,7 @@ public class problemDetailServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletContext context = getServletContext();
-        RequestDispatcher dispatcher = context.getRequestDispatcher("/view/problemDetail.jsp");
+        RequestDispatcher dispatcher = context.getRequestDispatcher("/view/problem/problemDetail.jsp");
         dispatcher.forward(request, response);
     }
 
