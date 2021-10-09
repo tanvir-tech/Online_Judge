@@ -1,8 +1,11 @@
 package com.example.online_judge.controller;
 
+import com.example.online_judge.service.executor.JavaExecutor;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class problemDetailServlet extends HttpServlet {
     @Override
@@ -14,6 +17,29 @@ public class problemDetailServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String ansCode = request.getParameter("ansCode");
+        String language = request.getParameter("ansLanguage");
+
+
+        // test print
+        PrintWriter out = response.getWriter();
+        out.println("<html><body>");
+        out.println("<br>" + ansCode + "<br>");
+        out.println("<br>" + language + "<br>");
+        out.println("</body></html>");
+
+        JavaExecutor javaExecutor = new JavaExecutor();
+        javaExecutor.saveJava(ansCode);
+        try {
+            javaExecutor.execute();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        boolean success = javaExecutor.checkCode();
+
+
+        if(success)
+            System.out.println("Congratulations! Your code is right.");
 
     }
 }

@@ -51,10 +51,11 @@
 
     <!-- submit section  -->
     <div class="container bg-success p-5">
-        <div class="row">
-            <div class="col-lg-10">
-                <h3>Write your code here</h3>
-                <textarea class="form-control" id="ansCode" name="ansCode" rows="12">
+        <form action="problemDetail" method="post">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h3>Write your code here</h3>
+                    <textarea class="form-control" id="ansCode" name="ansCode" rows="12">
 public class Demo{
         public static void main(String[] args) {
 
@@ -67,25 +68,27 @@ public class Demo{
     }
 }
                 </textarea>
+                </div>
+
+                <div class="col-lg-2">
+                    <h4>Language</h4>
+                    <select class="form-control" id="ansLanguage" name="ansLanguage">
+                        <option>Java 8</option>
+                        <option>C</option>
+                        <option>C++</option>
+                        <option>Python 3</option>
+                        <option>Javascript</option>
+                        <option>PHP</option>
+                        <option>Rust</option>
+                        <option>Perl</option>
+                        <option>Ruby</option>
+                        <option>C#</option>
+                    </select>
+                    <br>
+                    <button class="btn btn-danger" type="submit">Submit code</button>
+                </div>
             </div>
-            <div class="col-lg-2">
-                <h4>Language</h4>
-                <select class="form-control" id="ansLanguage" name="ansLanguage">
-                    <option>Java 8</option>
-                    <option>C</option>
-                    <option>C++</option>
-                    <option>Python 3</option>
-                    <option>Javascript</option>
-                    <option>PHP</option>
-                    <option>Rust</option>
-                    <option>Perl</option>
-                    <option>Ruby</option>
-                    <option>C#</option>
-                </select>
-                <br>
-                <button class="btn btn-danger" type="submit">Submit code</button>
-            </div>
-        </div>
+        </form>
     </div>
 
 
