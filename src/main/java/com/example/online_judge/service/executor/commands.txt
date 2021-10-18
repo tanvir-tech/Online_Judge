@@ -2,7 +2,5 @@ cd /home/tanvir/IdeaProjects/Online_Judge/src/main/java/com/example/online_judge
 javac Demo.java
 echo -------compiled------
 
-java Demo
+java -cp /home/tanvir/IdeaProjects/Online_Judge/src/main/java/com/example/online_judge/service/executor Demo
 echo -------ran--------
-sleep 1
-pwd

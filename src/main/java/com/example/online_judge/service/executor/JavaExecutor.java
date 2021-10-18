@@ -18,8 +18,8 @@ public class JavaExecutor {
         }
     }
 
-    public void execute() throws InterruptedException {
-        new Thread(() -> { // compile and run java file
+    public static void execute() throws InterruptedException {
+        // compile and run java file
             try {
                 // create a process
                 ProcessBuilder pb = new ProcessBuilder("bash");
@@ -46,10 +46,9 @@ public class JavaExecutor {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }).start();
-        Thread.sleep(5);
+        }
 
-    }
+
 
     public boolean checkCode() {
         // check the output of the code

@@ -5,7 +5,7 @@ package com.example.online_judge.service.executor;
 import java.util.*;
 import java.io.*;
 
-public class Main {
+public class BasicExecutor {
     public static void main(String[] args) throws IOException {
         try {
             // create a process

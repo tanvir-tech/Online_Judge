@@ -1,9 +1,11 @@
 package com.example.online_judge.controller;
 
+import com.example.online_judge.service.executor.BasicExecutor;
 import com.example.online_judge.service.executor.JavaExecutor;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -30,11 +32,15 @@ public class problemDetailServlet extends HttpServlet {
 
         JavaExecutor javaExecutor = new JavaExecutor();
         javaExecutor.saveJava(ansCode);
+
         try {
-            javaExecutor.execute();
+           javaExecutor.execute();//execute
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        //BasicExecutor.main();
+
+
         boolean success = javaExecutor.checkCode();
 
 
