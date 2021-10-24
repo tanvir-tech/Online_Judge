@@ -1,4 +1,4 @@
-package com.example.online_judge.controller;
+package com.example.online_judge.controller.problem;
 
 import com.example.online_judge.service.executor.BasicExecutor;
 import com.example.online_judge.service.executor.JavaExecutor;
@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class problemDetailServlet extends HttpServlet {
+public class ProblemDetailServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         ServletContext context = getServletContext();
@@ -45,7 +45,8 @@ public class problemDetailServlet extends HttpServlet {
 
 
         if(success)
-            System.out.println("Congratulations! Your code is right.");
+            System.out.println("Congratulations!");
+        else System.out.printf("Sorry");
 
     }
 }

@@ -64,8 +64,12 @@ public class JavaExecutor {
         lines = lines.trim();
         System.out.println(lines);
 
-
-        String dbLines = "DB"; // pending - Read form DB
+        // pending - Read form DB
+        String dbLines = "Welcome 0\n" +
+                "Welcome 1\n" +
+                "Welcome 2\n" +
+                "Welcome 3\n" +
+                "Welcome 4";
 
         // check file = DB ?
         if (lines.equals(dbLines)){
