@@ -1,7 +1,9 @@
 package com.example.online_judge.service.executor;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
+import java.util.Scanner;
 
 public class JavaExecutor {
     public void saveJava(String ansCode) {
@@ -50,11 +52,33 @@ public class JavaExecutor {
 
 
 
-    public boolean checkCode() {
-        // check the output of the code
-        File output = new File("/home/tanvir/IdeaProjects/Online_Judge/src/main/java/com/example/online_judge/service/executor/output.txt");
+    public boolean checkCode() throws FileNotFoundException {
 
-        return true;
+        File output = new File("/home/tanvir/IdeaProjects/Online_Judge/src/main/java/com/example/online_judge/service/executor/output.txt");
+        Scanner resultReader = new Scanner(output);
+        String lines = " ";
+        while (resultReader.hasNextLine()) {
+            String line = resultReader.nextLine();
+            lines = lines.concat("\n"+line);
+        }
+        lines = lines.trim();
+        System.out.println(lines);
+
+
+        String dbLines = "DB"; // pending - Read form DB
+
+        // check file = DB ?
+        if (lines.equals(dbLines)){
+            System.out.println("Right answer");
+            return true;
+        }else {
+            System.out.println("Wrong answer");
+            return false;
+        }
+
+
+
+
     }
 
 
